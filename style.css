@@ -19,7 +19,7 @@ body {
 }
 
 .main-container {
-  width: 1180px;
+  /* width: 1180px; */
   margin: 0px auto;
 
 }
@@ -45,7 +45,6 @@ nav ul {
 }
 
 .listitem a {
-
   color: #ffffff;
   text-decoration: none;
   margin: 0px 20px;
@@ -65,32 +64,41 @@ button {
   cursor: pointer;
 }
 
+.menu-icon {
+  display: none;
+}
+
+.fas {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
 /* ================ */
 .codex {
   display: flex;
   justify-content: space-between;
+  /* align-items: center; */
   color: #ffffff;
 }
 
 .left {
-  /* margin-left: 100px; */
   margin-top: 50px;
 }
 
 .left h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 600;
   font-family: open sans;
+
 }
 
 .left p {
   margin-top: 30px;
 }
 
-.right {}
 
 .right img {
-  width: 550px;
+  width: 650px;
   position: relative;
   left: 80px;
 }
@@ -99,28 +107,20 @@ button {
 /* ====mid part========*/
 .saas-main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   align-items: flex-start;
   margin-top: 100px;
-
 }
 
-.saas-left img {
-  width: 500px;
-  /* display: flex;
-  justify-content: flex-start; */
-}
-
-.saas-right {
-  position: relative;
-  right: 100px;
+.saas-left {
+  width: 40%;
 }
 
 .heading {
   font-size: 2rem;
   font-weight: 900;
 }
-
 
 
 .saas-feature {
@@ -157,37 +157,46 @@ button {
 }
 
 .footer {
-  margin: 20px;
+  margin: 40px;
 }
 
 .f-container {
   margin-top: 30px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
-
+  gap: 20px;
 }
 
 .f-container .box {
   background-color: #fff;
   box-shadow: 3px 5px 8px 3px rgba(153, 153, 153, 0.75);
   text-align: center;
-  padding: 30px 10px 10px 10px;
+  padding-top: 30px;
   position: relative;
   border-radius: 16px;
   width: 18%;
-  margin: 0 10px;
 }
 
 .box-selected {
   background-color: #7030CC;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px 10px 10px 10px;
   border-radius: 16px;
   color: #ffffff;
+}
+
+.box-content:hover {
+  background-color: #7030CC;
+  color: #ffffff;
+}
+
+.box-content {
+  padding-bottom: 10px;
+  border-radius: 16px;
+}
+
+.box {
+  background-color: #fff !important;
 }
 
 .b-image {
@@ -220,4 +229,69 @@ button {
 
 .bg-purple {
   background-color: var(--purple);
+}
+
+@media (max-width:480px) {
+  .main-container {
+    max-width: 480px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .codex {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 90%;
+    order: 5;
+  }
+
+  .header {
+    padding: 30px;
+  }
+
+  .left h1 {
+    font-size: 2rem;
+  }
+
+  .right img {
+    width: 100%;
+    position: static;
+  }
+
+  .saas-main {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .saas-main h2 {
+    font-size: 1.5rem;
+  }
+
+  .saas-right {
+    padding: 30px;
+  }
+
+  .f-container {
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  .f-title {
+    font-size: 1.5rem;
+  }
+
+  .f-container .box {
+    width: 80%;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
 }

@@ -26,10 +26,10 @@ body {
 
 .header {
   background-color: #7030CC;
-  padding: 40px 100px;
+  padding: 40px 60px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-
+  /* width: 60%; */
 }
 
 nav {
@@ -77,12 +77,13 @@ button {
 .codex {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  gap: 20px;
   color: #ffffff;
+  margin-top: 50px;
 }
 
 .left {
-  margin-top: 50px;
+  width: 50%;
 }
 
 .left h1 {
@@ -96,11 +97,12 @@ button {
   margin-top: 30px;
 }
 
+.right {
+  width: 50%;
+}
 
 .right img {
-  width: 650px;
-  position: relative;
-  left: 80px;
+  width: 100%;
 }
 
 
@@ -108,13 +110,14 @@ button {
 .saas-main {
   display: flex;
   justify-content: space-around;
+  gap: 20px;
   align-items: center;
   align-items: flex-start;
   margin-top: 100px;
 }
 
 .saas-left {
-  width: 40%;
+  width: 50%;
 }
 
 .heading {
@@ -144,8 +147,8 @@ button {
 .simg2,
 .simg3 {
   position: absolute;
-  top: 5px;
-  left: -28px;
+  top: 2px;
+  left: -35px;
 }
 
 /* ====== */
@@ -242,6 +245,7 @@ button {
 
   .codex {
     flex-direction: column;
+    align-items: center;
   }
 
   .left {
